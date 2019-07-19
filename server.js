@@ -6,10 +6,18 @@ const express = require('express');
 
 const app = express();
 
+const cors = require('cors');
+
 const Album = require('./data/database');
 
+
 const PORT = 3002;
-app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
 app.use(express.static('dist'));
 
@@ -22,11 +30,16 @@ app.get('/style', async (req, res) => {
 });
 
 app.get('/albums', async (req, res) => {
-  res.send(await Album.find({}).exec());
+  res.send(await Album.find({}).sort({
+    _id,
+    1
+  }).exec());
 });
 
 app.get('/api/albums/:albumId', async (req, res) => {
-  res.send(await Album.findOne({ id: parseInt(req.params.albumId, 10) }).exec());
+  res.send(await Album.findOne({
+    id: parseInt(req.params.albumId, 10)
+  }).exec());
 });
 
 app.get('/albums*', (req, res) => {
