@@ -14,7 +14,7 @@
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "seed": "seed -u 'mongodb://127.0.0.1:27017/albumMetadata' --drop-database ./data",
+    "seed": "mongoimport --host localhost --port 27017 --db albums --collection albums --drop --jsonArray --file ./data/albums.json",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon ./server.js",
     "lint": "eslint src -c .eslintrc.json --ext js,jsx"
