@@ -15,8 +15,10 @@
     "test": "jest",
     "test-coverage": "jest --coverage",
     "seed": "mongoimport --host localhost --port 27017 --db albums --collection albums --drop --jsonArray --file ./data/albums.json",
+    "react-dev": "webpack -d --watch",
     "server-dev": "nodemon ./server.js",
-    "lint": "eslint src -c .eslintrc.json --ext js,jsx"
+    "lint": "eslint src -c .eslintrc.json --ext js,jsx",
+    "build-production": "webpack --mode production"
   },
   "repository": {
     "type": "git",
