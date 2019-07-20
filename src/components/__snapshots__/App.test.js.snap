@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App stuff 1`] = `
+<div>
+  <AlbumInfo
+    albumInfo={
+      Object {
+        "name": "",
+        "tracks": Array [],
+        "year": 0,
+      }
+    }
+  />
+  <TrackContainer
+    tracks={Array []}
+  />
+</div>
+`;
