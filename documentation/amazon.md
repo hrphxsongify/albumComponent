@@ -25,6 +25,11 @@ add mongodb-org to yum
 
 `http://ec2-34-213-155-196.us-west-2.compute.amazonaws.com:1024`
 
+//this is it
+http://ec2-34-213-155-196.us-west-2.compute.amazonaws.com:1024/api/albums/4
+
+http://ec2-35-163-250-185.us-west-2.compute.amazonaws.com:1024/api/albums/4
+
 `http://ec2-35-163-250-185.us-west-2.compute.amazonaws.com:1024`
 
 nodemon replacement
@@ -32,6 +37,8 @@ nodemon replacement
 
 `pm2 startup`
 
+copy the environment variables listed to the command line and execute
+
 `pm2 save`
 
-`sudo env PATH=$PATH:/home/ec2-user/.nvm/versions/node/v12.6.0/bin /home/ec2-user/.nvm/versions/node/v12.6.0/lib/node_modules/pm2/bin/pm2 startup systemd -u ec2-user --hp /home/ec2-user`
+add aws imnbound rule for the designated port
