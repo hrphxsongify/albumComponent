@@ -13,6 +13,7 @@
   "main": "./src/index.jsx",
   "scripts": {
     "test": "jest",
+    "test-coverage": "jest --coverage",
     "seed": "seed -u 'mongodb://127.0.0.1:27017/albumMetadata' --drop-database ./data",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon ./server.js",

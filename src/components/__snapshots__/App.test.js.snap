@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App stuff 1`] = `
+exports[`App component render 1`] = `
 <div>
   <AlbumInfo
     albumInfo={

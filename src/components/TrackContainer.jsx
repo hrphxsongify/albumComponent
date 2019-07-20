@@ -8,11 +8,10 @@ const TrackContainer = ({ tracks, artist }) => {
       <div className="tracks">
         <TrackHeading />
         {tracks.map(track => (
-          <div key={track.number}>
+          <div className="a_Track" key={track.number}>
             <Track track={track} artist={artist} />
           </div>
         ))}
-        ;
       </div>
     </div>
   );
